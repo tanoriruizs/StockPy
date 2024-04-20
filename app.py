@@ -69,7 +69,7 @@ class ProductScannerApp:
         if barcode:
             product = self.db_manager.find_product(barcode)
             if product:
-                messagebox.showinfo("Producto Encontrado", f"Nombre: {product[0]}, Precio: ${product[1]}, Cantidad: {product[2]}")
+                messagebox.showinfo("Producto Encontrado", f"Código de barras: {product[0]}, Nombre: {product[1]}, Precio: {product[2]}, Cantidad: {product[3]}")
             else:
                 messagebox.showinfo("Producto no Encontrado", "El producto no existe en la base de datos.")
         else:
